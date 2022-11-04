@@ -2,7 +2,7 @@
 
 Hi team,
 
-There are only a few steps to run this React app.
+There are only a few steps to run this React app:
 
 1. First of all clone this repository on your machine using this github link:
       HTTPS: https://github.com/Civolilah/invoice-ninja-react.git
