@@ -1,40 +1,38 @@
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import AdbIcon from '@mui/icons-material/Adb';
+import { AppBar, Box, Typography } from '@mui/material';
+import { FileCopy } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import {
+  navBarStyle,
+  logoTitleStyle,
+  titleTextStyle,
+  navBarItemsStyle,
+  itemTextStyle
+} from 'styles/components/NavigationBarStyle';
+import linkStyle from 'styles/GlobalStyles';
+import { ROUTES } from 'constants/index';
 
 const ResponsiveAppBar = (): JSX.Element => {
   return (
-    <AppBar position="static">
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <AdbIcon sx={{ mr: 1 }} />
-        <Typography
-          variant="h6"
-          sx={{
-            fontFamily: 'monospace',
-            fontWeight: 700,
-            letterSpacing: '.3rem',
-            color: 'inherit',
-            textDecoration: 'none'
-          }}
-        >
-            LOGO
-        </Typography>
-      </Box>
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        <Button
-          key="overview"
-          sx={{ my: 2, color: 'white', display: 'block' }}
-        >
+    <AppBar position="static" sx={navBarStyle}>
+      <Link to={ `${ROUTES.DASHBOARD}` } style={linkStyle}>
+        <Box sx={logoTitleStyle}>
+          <FileCopy />
+          <Typography variant="h6" sx={titleTextStyle}>
+            Ninja
+          </Typography>
+        </Box>
+      </Link>
+      <Box sx={navBarItemsStyle}>
+        <Link to={`${ROUTES.DASHBOARD}`} style={linkStyle}>
+          <Typography sx={itemTextStyle}>
             Overview
-        </Button>
-        <Button
-          key="addPost"
-          sx={{ my: 2, color: 'white', display: 'block' }}
-        >
+          </Typography>
+        </Link>
+        <Link to={`${ROUTES.ADD}`} style={linkStyle}>
+          <Typography sx={itemTextStyle}>
             Add post
-        </Button>
+          </Typography>
+        </Link>
       </Box>
     </AppBar>
   );

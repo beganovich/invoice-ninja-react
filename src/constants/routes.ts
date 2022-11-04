@@ -1,9 +1,9 @@
-interface ROUTES_TYPES {
-  DASHBOARD: string
-}
+import { RoutesTypes } from 'types/constants/constantsTypes';
 
-const ROUTES: ROUTES_TYPES = {
-  DASHBOARD: '/dashboard'
+const ROUTES: RoutesTypes = {
+  DASHBOARD: '/dashboard',
+  ADD: '/addPost',
+  EDIT: '/editPost'
 };
 
 export default ROUTES;

@@ -1,8 +1,11 @@
 import Router from 'router/Router';
+import Providers from 'providers/Index';
 
 const App = (): JSX.Element => {
   return (
-    <Router/>
+    <Providers>
+      <Router/>
+    </Providers>
   );
 };
 
