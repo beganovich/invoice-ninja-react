@@ -12,8 +12,10 @@ const Router = (): JSX.Element => (
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
         <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
-        <Route path={ROUTES.ADD} element={<AddPost />} />
-        <Route path={`${ROUTES.EDIT}/:postId`} element={<EditPost />} />
+        <Route path={ROUTES.BASE_POSTS}>
+          <Route path={ROUTES.ADD_POST} element={<AddPost />} />
+          <Route path={`${ROUTES.EDIT_POST}/:postId`} element={<EditPost />} />
+        </Route>
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
