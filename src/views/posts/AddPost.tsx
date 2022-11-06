@@ -53,7 +53,7 @@ const AddPost = (): JSX.Element => {
         const { data }: { data: DisplayPostTypes } = await addPost(formData);
         const postId: string | undefined = data?.id;
         toastifyAlertSuccess('Successfully added post');
-        navigate(`${ROUTES.EDIT}/${postId}`);
+        navigate(`${ROUTES.EDIT_POST}/${postId}`);
       } catch (error) {
         toastifyAlertError(ERROR_MESSAGES.SOMETHING_WRONG);
       }

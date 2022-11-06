@@ -28,7 +28,7 @@ const ResponsiveAppBar = (): JSX.Element => {
             Overview
           </Typography>
         </Link>
-        <Link to={`${ROUTES.ADD}`} style={linkStyle}>
+        <Link to={`${ROUTES.ADD_POST}`} style={linkStyle}>
           <Typography sx={itemTextStyle}>
             Add post
           </Typography>

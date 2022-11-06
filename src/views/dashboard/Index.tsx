@@ -84,7 +84,7 @@ const Index = (): JSX.Element => {
                     ))}
                     <TableCell align="center">
                       <IconButton>
-                        <Link to={`${ROUTES.EDIT}/${row?.id}`}>
+                        <Link to={`${ROUTES.EDIT_POST}/${row?.id}`}>
                           <EditOutlined fontSize="medium" sx={{ color: 'primary.main' }} />
                         </Link>
                       </IconButton>

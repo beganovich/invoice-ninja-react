@@ -12,8 +12,9 @@ export interface TableColumnsTypes {
 
 export interface RoutesTypes {
   DASHBOARD: string
-  ADD: string
-  EDIT: string
+  BASE_POSTS: string
+  ADD_POST: string
+  EDIT_POST: string
 }
 
 export interface ValidationMessagesTypes {
