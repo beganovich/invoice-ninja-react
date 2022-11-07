@@ -1,6 +1,7 @@
 export interface ErrorMessagesTypes {
   AUTHORIZATION: string
   SOMETHING_WRONG: string
+  POST_DOES_NOT_EXIST: string
 }
 
 export interface TableColumnsTypes {

@@ -51,7 +51,12 @@ const EditPost = (): JSX.Element => {
 
   const fetchPostData = async (): Promise<any> => {
     try {
-      const { data } = await getPostById(postId);
+      const { data }: { data: PostTypes[] } = await getPostById(postId);
+      if (data?.length === 0) {
+        toastifyAlertError(ERROR_MESSAGES.POST_DOES_NOT_EXIST);
+        navigate(ROUTES.DASHBOARD);
+        return;
+      }
       const { title, content }: PostTypes = data[0];
       reset(
         {
